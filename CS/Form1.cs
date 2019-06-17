@@ -11,7 +11,9 @@ namespace LabelTextCustomData {
 
 
         private void Form1_Load(object sender, EventArgs e) {
+            
             new nwindDataSetTableAdapters.ProductsTableAdapter().Fill(nwindDataSet.Products);
+            nwindDataSetBindingSource.DataSource = nwindDataSet;
         }
 
         private void chartControl1_CustomDrawSeriesPoint(object sender, CustomDrawSeriesPointEventArgs e) {
