@@ -1,6 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
-Namespace LabelTextCustomData
+﻿Namespace LabelTextCustomData
 	Partial Public Class Form1
 		''' <summary>
 		''' Required designer variable.
@@ -25,85 +23,77 @@ Namespace LabelTextCustomData
 		''' the contents of this method with the code editor.
 		''' </summary>
 		Private Sub InitializeComponent()
-            Me.components = New System.ComponentModel.Container
-            Dim XyDiagram1 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram
-            Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series
-            Dim SideBySideBarSeriesLabel1 As DevExpress.XtraCharts.SideBySideBarSeriesLabel = New DevExpress.XtraCharts.SideBySideBarSeriesLabel
-            Dim SideBySideBarSeriesView1 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView
-            Dim SideBySideBarSeriesLabel2 As DevExpress.XtraCharts.SideBySideBarSeriesLabel = New DevExpress.XtraCharts.SideBySideBarSeriesLabel
-            Me.nwindDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-            Me.nwindDataSet = New LabelTextCustomData.nwindDataSet
-            Me.chartControl1 = New DevExpress.XtraCharts.ChartControl
-            CType(Me.nwindDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.chartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(SideBySideBarSeriesLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(SideBySideBarSeriesLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.SuspendLayout()
-            '
-            'nwindDataSetBindingSource
-            '
-            Me.nwindDataSetBindingSource.DataSource = Me.nwindDataSet
-            Me.nwindDataSetBindingSource.Position = 0
-            '
-            'nwindDataSet
-            '
-            Me.nwindDataSet.DataSetName = "nwindDataSet"
-            Me.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-            '
-            'chartControl1
-            '
-            Me.chartControl1.DataSource = Me.nwindDataSet.Products
-            XyDiagram1.AxisX.Label.Staggered = True
-            XyDiagram1.AxisX.Range.ScrollingRange.SideMarginsEnabled = True
-            XyDiagram1.AxisX.Range.SideMarginsEnabled = True
-            XyDiagram1.AxisX.VisibleInPanesSerializable = "-1"
-            XyDiagram1.AxisY.Range.ScrollingRange.SideMarginsEnabled = True
-            XyDiagram1.AxisY.Range.SideMarginsEnabled = True
-            XyDiagram1.AxisY.VisibleInPanesSerializable = "-1"
-            XyDiagram1.LabelsResolveOverlappingMinIndent = 0
-            Me.chartControl1.Diagram = XyDiagram1
-            Me.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.chartControl1.Legend.Visible = False
-            Me.chartControl1.Location = New System.Drawing.Point(0, 0)
-            Me.chartControl1.Name = "chartControl1"
-            Series1.ArgumentDataMember = "Products.ProductName"
-            Series1.DataFilters.ClearAndAddRange(New DevExpress.XtraCharts.DataFilter() {New DevExpress.XtraCharts.DataFilter("Products.CategoryID", "System.Int32", DevExpress.XtraCharts.DataFilterCondition.Equal, 4)})
-            Series1.DataSource = Me.nwindDataSetBindingSource
-            SideBySideBarSeriesLabel1.LineVisible = True
-            Series1.Label = SideBySideBarSeriesLabel1
-            Series1.Name = "Series 1"
-            Series1.ValueDataMembersSerializable = "Products.UnitPrice"
-            SideBySideBarSeriesView1.ColorEach = True
-            Series1.View = SideBySideBarSeriesView1
-            Me.chartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
-            SideBySideBarSeriesLabel2.LineVisible = True
-            Me.chartControl1.SeriesTemplate.Label = SideBySideBarSeriesLabel2
-            Me.chartControl1.Size = New System.Drawing.Size(745, 432)
-            Me.chartControl1.TabIndex = 0
-            '
-            'Form1
-            '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-            Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(745, 432)
-            Me.Controls.Add(Me.chartControl1)
-            Me.Name = "Form1"
-            Me.Text = "Form1"
-            CType(Me.nwindDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(XyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(SideBySideBarSeriesLabel1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(SideBySideBarSeriesLabel2, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.chartControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.ResumeLayout(False)
+			Me.components = New System.ComponentModel.Container()
+			Dim xyDiagram1 As New DevExpress.XtraCharts.XYDiagram()
+			Dim series1 As New DevExpress.XtraCharts.Series()
+			Dim sideBySideBarSeriesView1 As New DevExpress.XtraCharts.SideBySideBarSeriesView()
+			Me.nwindDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+			Me.nwindDataSet = New LabelTextCustomData.nwindDataSet()
+			Me.chartControl1 = New DevExpress.XtraCharts.ChartControl()
+			CType(Me.nwindDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+			CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+			CType(Me.chartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+			CType(xyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
+			CType(series1, System.ComponentModel.ISupportInitialize).BeginInit()
+			CType(sideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+			Me.SuspendLayout()
+			' 
+			' nwindDataSetBindingSource
+			' 
+			Me.nwindDataSetBindingSource.DataSource = Me.nwindDataSet
+			Me.nwindDataSetBindingSource.Position = 0
+			' 
+			' nwindDataSet
+			' 
+			Me.nwindDataSet.DataSetName = "nwindDataSet"
+			Me.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+			' 
+			' chartControl1
+			' 
+			Me.chartControl1.DataSource = Me.nwindDataSet.Products
+			xyDiagram1.AxisX.Label.Staggered = True
+			xyDiagram1.AxisX.VisibleInPanesSerializable = "-1"
+			xyDiagram1.AxisY.VisibleInPanesSerializable = "-1"
+			xyDiagram1.LabelsResolveOverlappingMinIndent = 0
+			Me.chartControl1.Diagram = xyDiagram1
+			Me.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill
+			Me.chartControl1.Legend.Name = "Default Legend"
+			Me.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False
+			Me.chartControl1.Location = New System.Drawing.Point(0, 0)
+			Me.chartControl1.Name = "chartControl1"
+			series1.ArgumentDataMember = "ProductName"
+			series1.FilterString = "[CategoryID] = 4"
+			series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True
+			series1.Name = "Series 1"
+			series1.ValueDataMembersSerializable = "UnitPrice"
+			sideBySideBarSeriesView1.ColorEach = True
+			series1.View = sideBySideBarSeriesView1
+			Me.chartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() { series1}
+			Me.chartControl1.SeriesTemplate.SeriesColorizer = Nothing
+			Me.chartControl1.Size = New System.Drawing.Size(745, 432)
+			Me.chartControl1.TabIndex = 0
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.chartControl1.CustomDrawSeriesPoint += new DevExpress.XtraCharts.CustomDrawSeriesPointEventHandler(this.chartControl1_CustomDrawSeriesPoint);
+			' 
+			' Form1
+			' 
+			Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
+			Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+			Me.ClientSize = New System.Drawing.Size(745, 432)
+			Me.Controls.Add(Me.chartControl1)
+			Me.Name = "Form1"
+			Me.Text = "Form1"
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.Load += new System.EventHandler(this.Form1_Load);
+			CType(Me.nwindDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+			CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+			CType(xyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
+			CType(sideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
+			CType(series1, System.ComponentModel.ISupportInitialize).EndInit()
+			CType(Me.chartControl1, System.ComponentModel.ISupportInitialize).EndInit()
+			Me.ResumeLayout(False)
 
-        End Sub
+		End Sub
 
 		#End Region
 
